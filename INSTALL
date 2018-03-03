@@ -1,0 +1,9 @@
+Building Magic
+
+See doc/readme-qt.rst for instructions on building Magic QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of Magic.
+
+See doc/build-*.txt for instructions on building MagicCoind,
+the intended-for-services, no-graphical-interface, reference
+implementation of Magic.
