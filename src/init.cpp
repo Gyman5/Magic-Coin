@@ -145,13 +145,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to bitcoind / RPC client
+            // First part of help message is specific to MagicCoind / RPC client
             std::string strUsage = _("Magic version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  VenusCoind [options]                     " + "\n" +
-                  "  VenusCoind [options] <command> [params]  " + _("Send command to -server or VenusCoind") + "\n" +
-                  "  VenusCoind [options] help                " + _("List commands") + "\n" +
-                  "  VenusCoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  MagicCoind [options]                     " + "\n" +
+                  "  MagicCoind [options] <command> [params]  " + _("Send command to -server or MagicCoind") + "\n" +
+                  "  MagicCoind [options] help                " + _("List commands") + "\n" +
+                  "  MagicCoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
