@@ -28,7 +28,11 @@ Then install [Homebrew](https://brew.sh).
 Dependencies
 ----------------------
 
+<<<<<<< HEAD
 brew install qt5 automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python3 qt libevent
+=======
+brew install qt5 automake berkeley-db4 libtool boost miniupnpc openssl pkg-config protobuf python3 libevent
+>>>>>>> fb3099b6d3f92cd331cc007c336c8872f5f85f9b
 
 
 Compiling
