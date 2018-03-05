@@ -38,9 +38,12 @@ brew install qt5 automake berkeley-db4 libtool boost miniupnpc openssl pkg-confi
 Compiling
 ----------------------
 
-git clone https://github.com/Gyman5/Magic-Coin.git
+git clone https://github.com/mad345/Magic-Coin.git
+
 cd Magic-Coin
+
 qmake Magic-qt-mac.pro
+
 make
 
 
@@ -48,5 +51,6 @@ Notes
 -----
 
 * Tested on OS X 10.8 through 10.13 on 64-bit Intel processors only.
-*check your qt,bdb,boost,upnp version in the /usr/local/Cellar/ directory
+
+* check your qt,bdb,boost,upnp version in the /usr/local/Cellar/ directory
 
