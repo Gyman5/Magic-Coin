@@ -145,13 +145,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to bitcoind / RPC client
+            // First part of help message is specific to MagicCoind / RPC client
             std::string strUsage = _("Magic version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  VenusCoind [options]                     " + "\n" +
-                  "  VenusCoind [options] <command> [params]  " + _("Send command to -server or VenusCoind") + "\n" +
-                  "  VenusCoind [options] help                " + _("List commands") + "\n" +
-                  "  VenusCoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  MagicCoind [options]                     " + "\n" +
+                  "  MagicCoind [options] <command> [params]  " + _("Send command to -server or MagicCoind") + "\n" +
+                  "  MagicCoind [options] help                " + _("List commands") + "\n" +
+                  "  MagicCoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -726,7 +726,7 @@ bool AppInit2()
         printf("Shutdown requested. Exiting.\n");
         return false;
     }
-    printf(" block index %15"PRId64"ms\n", GetTimeMillis() - nStart);
+    printf(" block index %15" PRId64 "ms\n", GetTimeMillis() - nStart);
 
     if (GetBoolArg("-printblockindex") || GetBoolArg("-printblocktree"))
     {
@@ -827,7 +827,7 @@ bool AppInit2()
     }
 
     printf("%s", strErrors.str().c_str());
-    printf(" wallet      %15"PRId64"ms\n", GetTimeMillis() - nStart);
+    printf(" wallet      %15" PRId64 "ms\n", GetTimeMillis() - nStart);
 
     RegisterWallet(pwalletMain);
 
@@ -847,7 +847,7 @@ bool AppInit2()
         printf("Rescanning last %i blocks (from block %i)...\n", pindexBest->nHeight - pindexRescan->nHeight, pindexRescan->nHeight);
         nStart = GetTimeMillis();
         pwalletMain->ScanForWalletTransactions(pindexRescan, true);
-        printf(" rescan      %15"PRId64"ms\n", GetTimeMillis() - nStart);
+        printf(" rescan      %15" PRId64 "ms\n", GetTimeMillis() - nStart);
     }
 
     // ********************************************************* Step 9: import blocks
@@ -889,7 +889,7 @@ bool AppInit2()
             printf("Invalid or missing peers.dat; recreating\n");
     }
 
-    printf("Loaded %i addresses from peers.dat  %"PRId64"ms\n",
+    printf("Loaded %i addresses from peers.dat  %" PRId64 "ms\n",
            addrman.size(), GetTimeMillis() - nStart);
 
     // ********************************************************* Step 11: start node
@@ -900,11 +900,11 @@ bool AppInit2()
     RandAddSeedPerfmon();
 
     //// debug print
-    printf("mapBlockIndex.size() = %"PRIszu"\n",   mapBlockIndex.size());
+    printf("mapBlockIndex.size() = %" PRIszu "\n",   mapBlockIndex.size());
     printf("nBestHeight = %d\n",            nBestHeight);
-    printf("setKeyPool.size() = %"PRIszu"\n",      pwalletMain->setKeyPool.size());
-    printf("mapWallet.size() = %"PRIszu"\n",       pwalletMain->mapWallet.size());
-    printf("mapAddressBook.size() = %"PRIszu"\n",  pwalletMain->mapAddressBook.size());
+    printf("setKeyPool.size() = %" PRIszu "\n",      pwalletMain->setKeyPool.size());
+    printf("mapWallet.size() = %" PRIszu "\n",       pwalletMain->mapWallet.size());
+    printf("mapAddressBook.size() = %" PRIszu "\n",  pwalletMain->mapAddressBook.size());
 
     if (!NewThread(StartNode, NULL))
         InitError(_("Error: could not start node"));

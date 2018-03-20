@@ -383,7 +383,7 @@ static string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
             "HTTP/1.1 %d %s\r\n"
             "Date: %s\r\n"
             "Connection: %s\r\n"
-            "Content-Length: %"PRIszu"\r\n"
+            "Content-Length: %" PRIszu "\r\n"
             "Content-Type: application/json\r\n"
             "Server: Magic-json-rpc/%s\r\n"
             "\r\n"
@@ -760,7 +760,7 @@ void ThreadRPCServer2(void* parg)
     {
         unsigned char rand_pwd[32];
         RAND_bytes(rand_pwd, 32);
-        string strWhatAmI = "To use VenusCoind";
+        string strWhatAmI = "To use MagicCoind";
         if (mapArgs.count("-server"))
             strWhatAmI = strprintf(_("To use the %s option"), "\"-server\"");
         else if (mapArgs.count("-daemon"))
